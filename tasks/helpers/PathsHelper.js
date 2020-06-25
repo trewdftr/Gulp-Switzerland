@@ -1,3 +1,5 @@
+let {baseDir, preprocessor} = require('./VariableHelper.js');
+
 let paths = {
 
 	scripts: {
