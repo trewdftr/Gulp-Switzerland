@@ -1,0 +1,31 @@
+{
+  "name": "gulp-switzerland",
+  "version": "1.0.0",
+  "description": "Gulp Bunlde For Comfortable Website Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiiisuiii/Gulp-Switzerland.git"
+  },
+  "keywords": [
+    "Gulp",
+    "SASS/JS",
+    "Bundle",
+    "Gulp 4"
+  ],
+  "author": "Shiiisuiii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shiiisuiii/Gulp-Switzerland/issues"
+  },
+  "homepage": "https://github.com/Shiiisuiii/Gulp-Switzerland#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}
