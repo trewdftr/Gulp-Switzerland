@@ -1,5 +1,3 @@
-const browserSync = require("browser-sync")
-
 let localServer = require('browser-sync').create();
 
 function sync() {
