@@ -11,7 +11,7 @@ let paths = {
 	},
 
 	styles: {
-		src:  baseDir + '/' + preprocessor + '/main.*',
+		src:  baseDir + '/' + preprocessor + '/test.sass', // ./src/sass/test.*
 		dest: baseDir + '/css',
 	},
 
@@ -29,7 +29,9 @@ let paths = {
 
 	cssOutputName: 'app.min.css',
 	jsOutputName:  'app.min.js',
-
 }
 
+console.log(paths.styles.src);
+
 exports.paths = paths;
+exports.paths.src = paths.src;
