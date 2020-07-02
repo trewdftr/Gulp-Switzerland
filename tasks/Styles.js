@@ -1,5 +1,5 @@
 const {dest, src} = require('../node_modules/gulp');
-const {paths} = require('./helpers/PathsHelper.js');
+const {paths} = require('./helpers/PathsHelper');
 
 const sass         = require('gulp-sass');
 const scss         = require('gulp-sass');
