@@ -1,5 +1,5 @@
 'use strict';
-const { parallel, series } = require('gulp');
+const { parallel } = require('gulp');
 
 const sync     = require('./tasks/Watch');
 const styles      = require('./tasks/Styles');
