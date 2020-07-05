@@ -1,0 +1,5 @@
+@import './mixins/font-face';
+
+@include font-face('Fira Sans', '../fonts/dest/FiraSans-Light', 300);
+@include font-face('Fira Sans', '../fonts/dest/FiraSans-Regular', 400);
+@include font-face('Fira Sans', '../fonts/dest/FiraSans-ExtraBold', 800);
