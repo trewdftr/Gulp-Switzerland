@@ -36,5 +36,10 @@
     "gulp-sass": "^4.1.0",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify-es": "^2.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "normalize-stylus": "^1.0.1",
+    "normalize.less": "^1.0.0"
   }
 }
