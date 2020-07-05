@@ -17,6 +17,11 @@ let paths = {
 		dest: baseDir + '/images/dest',
 	},
 
+	fonts: {
+		src:  baseDir + '/fonts/src/**/*',
+		dest: baseDir + '/fonts/dest',
+	},
+
 	deploy: {
 		hostname:    'username@yousite.com', // Deploy hostname
 		destination: 'yousite/public_html/', // Deploy destination
