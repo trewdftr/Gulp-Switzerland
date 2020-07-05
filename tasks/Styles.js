@@ -1,5 +1,5 @@
 const { src, dest } = require('gulp');
-const {paths} = require('./helpers/PathsHelper');
+const { paths } = require('./helpers/PathsHelper');
 
 const sass         = require('gulp-sass');
 const scss         = require('gulp-sass');
@@ -12,7 +12,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 function styles() {
 	return src(paths.styles.src)
-	.pipe(sass())
+	.pipe(scss())
 	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
