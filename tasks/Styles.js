@@ -15,7 +15,7 @@ function styles() {
 	.pipe(scss())
 	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } }, format: 'beautify'  }))
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
