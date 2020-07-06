@@ -201,19 +201,22 @@ template {
   font-family: "Fira Sans";
   font-weight: 300;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-Light.woff2)
+  src: url(../fonts/dest/FiraSans-Light.woff2);
+  src: url(webfont.eot?#iefix) format("embedded-opentype"),url(webfont.eot),url(webfont.woff) format("woff"),url(webfont.ttf) format("truetype"),url(webfont.svg#svgFontName) format("svg")
 }
 @font-face {
   font-family: "Fira Sans";
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-Regular.woff2)
+  src: url(../fonts/dest/FiraSans-Regular.woff2);
+  src: url(webfont.eot?#iefix) format("embedded-opentype"),url(webfont.eot),url(webfont.woff) format("woff"),url(webfont.ttf) format("truetype"),url(webfont.svg#svgFontName) format("svg")
 }
 @font-face {
   font-family: "Fira Sans";
   font-weight: 800;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-ExtraBold.woff2)
+  src: url(../fonts/dest/FiraSans-ExtraBold.woff2);
+  src: url(webfont.eot?#iefix) format("embedded-opentype"),url(webfont.eot),url(webfont.woff) format("woff"),url(webfont.ttf) format("truetype"),url(webfont.svg#svgFontName) format("svg")
 }
 h1 {
   font-family: 'Fira Sans',serif;
