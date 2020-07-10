@@ -1,13 +1,8 @@
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) 
-    @font-face 
-        font-family: $font-family;
-		font-weight: $weight;
-		font-style: $style;
-        src: url('#{$file-path}.woff2');
-        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-             url('#{$file-path}.eot'), /* IE9 Compat Modes */
-             url('#{$file-path}.woff') format('woff'), /* Modern Browsers */
-             url('#{$file-path}.ttf')  format('truetype'), /* Safari, Android, iOS */
-             url('#{$file-path}.svg#svgFontName') format('svg'); /* Legacy iOS */
-    
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: true )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
 
+		@if $asset-pipeline == true 
+			src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
