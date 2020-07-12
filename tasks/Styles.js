@@ -1,5 +1,6 @@
 const { src, dest } = require('gulp');
 const { paths } = require('./helpers/PathsHelper');
+const { preprocessor } = require('./helpers/VariableHelper');
 
 const sass         = require('gulp-sass');
 const scss         = require('gulp-sass');
@@ -10,9 +11,17 @@ const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 
+
+global.runFunctionByName = function runFunctionByName(functionName, context = global) {
+ 	return context[functionName];
+}
+
+const x = runFunctionByName(preprocessor);
+console.log(x);
+
 function styles() {
 	return src(paths.styles.src)
-	.pipe(scss())
+	.pipe(runFunctionByName(preprocessor).on('error', preprocessor.logError))
 	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } }, format: 'beautify'  }))
