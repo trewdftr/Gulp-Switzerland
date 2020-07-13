@@ -10,11 +10,14 @@ const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
+const { stream } = require('browser-sync');
 
 
 global.runFunctionByName = function runFunctionByName(functionName, context = global) {
  	return context[functionName];
 }
+
+stream
 
 const x = runFunctionByName(preprocessor);
 console.log(x);
