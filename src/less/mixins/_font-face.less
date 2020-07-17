@@ -1,14 +1,20 @@
-.font-face(@font-family, @file-path, @weight: normal, @style: normal, @asset-pipeline: false ) {
+.font-face(@font-family, @file-path, @weight: normal, @style: normal) {
+    
+    @eot: '.eot';
+    @ttf: '.ttf';
+    @svg: '.svg';
+    @woff: '.woff';
+    @woff2: '.woff2';
+    
     @font-face {
         font-family: @font-family;
 		font-weight: @weight;
 		font-style: @style;
-        src: url(@file-path);
-        src: url(@file-path) format('embedded-opentype'), /* IE6-IE8 */
-            url(@file-path), /* IE9 Compat Modes */
-            url(@file-path) format('woff'), /* Modern Browsers */
-            url(@file-path)  format('truetype'), /* Safari, Android, iOS */
-            url(@file-path) format('svg'); /* Legacy iOS */
+        src: url(~"@{file-path}@{woff2}") format('woff2'), url(~"@{file-path}@{eot}") format('embedded-opentype'), /* IE6-IE8 */
+            url(~"@{file-path}@{woff}"), /* IE9 Compat Modes */
+            url(~"@{file-path}@{woff}") format('woff'), /* Modern Browsers */
+            url(~"@{file-path}@{ttf}")  format('truetype'), /* Safari, Android, iOS */
+            url(~"@{file-path}@{svg}") format('svg'); /* Legacy iOS */
     }
 }
     
