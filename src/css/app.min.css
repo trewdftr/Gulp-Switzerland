@@ -152,24 +152,21 @@ template {
   font-family: 'Fira Sans';
   font-weight: 300;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-Light.woff2);
-  src: url(../fonts/dest/FiraSans-Light.woff2) format('embedded-opentype'),url(../fonts/dest/FiraSans-Light.woff2),url(../fonts/dest/FiraSans-Light.woff2) format('woff'),url(../fonts/dest/FiraSans-Light.woff2) format('truetype'),url(../fonts/dest/FiraSans-Light.woff2) format('svg')
+  src: url(../fonts/dest/FiraSans-Light.woff2) format('woff2'),url(../fonts/dest/FiraSans-Light.eot) format('embedded-opentype'),url(../fonts/dest/FiraSans-Light.woff) format('woff'),url(../fonts/dest/FiraSans-Light.ttf) format('truetype')
 }
 @font-face {
   font-family: 'Fira Sans';
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-Regular.woff);
-  src: url(../fonts/dest/FiraSans-Regular.woff) format('embedded-opentype'),url(../fonts/dest/FiraSans-Regular.woff),url(../fonts/dest/FiraSans-Regular.woff) format('woff'),url(../fonts/dest/FiraSans-Regular.woff) format('truetype'),url(../fonts/dest/FiraSans-Regular.woff) format('svg')
+  src: url(../fonts/dest/FiraSans-Regular.woff2) format('woff2'),url(../fonts/dest/FiraSans-Regular.eot) format('embedded-opentype'),url(../fonts/dest/FiraSans-Regular.woff) format('woff'),url(../fonts/dest/FiraSans-Regular.ttf) format('truetype')
 }
 @font-face {
   font-family: 'Fira Sans';
   font-weight: 800;
   font-style: normal;
-  src: url(../fonts/dest/FiraSans-ExtraBold.woff2);
-  src: url(../fonts/dest/FiraSans-ExtraBold.woff2) format('embedded-opentype'),url(../fonts/dest/FiraSans-ExtraBold.woff2),url(../fonts/dest/FiraSans-ExtraBold.woff2) format('woff'),url(../fonts/dest/FiraSans-ExtraBold.woff2) format('truetype'),url(../fonts/dest/FiraSans-ExtraBold.woff2) format('svg')
+  src: url(../fonts/dest/FiraSans-ExtraBold.woff2) format('woff2'),url(../fonts/dest/FiraSans-ExtraBold.eot) format('embedded-opentype'),url(../fonts/dest/FiraSans-ExtraBold.woff) format('woff'),url(../fonts/dest/FiraSans-ExtraBold.ttf) format('truetype')
 }
 h1 {
   font-family: 'Fira Sans',sans-serif;
-  font-weight: 300
+  font-weight: 800
 }
