@@ -12,8 +12,6 @@ function sync() {
         notify: true,
 	    online: true
 	})
-	
-	
 }
 
 function reload() {
@@ -26,8 +24,6 @@ function startWatch () {
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', reload);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts.scripts);
 }
-
-
 
 exports.server = sync;
 exports.startWatch = startWatch;

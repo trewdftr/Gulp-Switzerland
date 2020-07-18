@@ -1,6 +1,5 @@
 const { src, dest } = require('gulp');
 const { paths } = require('./helpers/PathsHelper');
-const { preprocessor } = require('./helpers/VariableHelper');
 
 const sass         = require('gulp-sass');
 const scss         = require('gulp-sass');
@@ -10,6 +9,7 @@ const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
+
 
 function styles() {
 	return src(paths.styles.src)
