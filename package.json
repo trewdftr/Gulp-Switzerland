@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Gulp",
-    "SASS/JS",
+    "Sass/Js",
     "Bundle",
     "Gulp 4"
   ],
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Shiiisuiii/Gulp-Switzerland#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
