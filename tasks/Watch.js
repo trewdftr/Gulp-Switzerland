@@ -18,7 +18,7 @@ function reload() {
 	localServer.reload();
   }
 
-function startWatch () {
+function startWatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles.styles);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images.images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', reload);

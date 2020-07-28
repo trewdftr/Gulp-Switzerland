@@ -10,4 +10,10 @@ function toWoff2() {
     .pipe(dest(paths.fonts.dest))
 }
 
+function ttfRebase() {
+    return src(paths.fonts.src)
+    .pipe(dest(paths.fonts.dest))
+}
+
 exports.toWoff2 = toWoff2;
+exports.ttfRebase = ttfRebase;
