@@ -1,5 +1,5 @@
 const { watch } = require('gulp');
-const { preprocessor, imageswatch, fileswatch, baseDir }  = require('./helpers/VariableHelper');
+const { preprocessor, html, imagesWatch, baseDir }  = require('./helpers/VariableHelper');
 const { paths }   = require('./helpers/PathsHelper');
 const styles      = require('./Styles')
 const images      = require('./Images')
@@ -20,8 +20,8 @@ function reload() {
 
 function startWatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles.styles);
-	watch(baseDir  + '/**/*.{' + imageswatch + '}', images.images);
-	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', reload);
+	watch(`${baseDir}/images/${baseDir}/${imagesWatch}`, images.images);
+	watch(`${baseDir}/${html}`).on('change', reload);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts.scripts);
 }
 
