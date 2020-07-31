@@ -36,4 +36,9 @@ jspm_packages/
 
 # Swap data
 *.swp
-*.swo 
+*.swo
+
+# Dest/Dist/Public folders
+dest
+dist
+public
