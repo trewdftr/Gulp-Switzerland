@@ -36,6 +36,7 @@ function toEot() {
 
 function ttfRebase() {
     return src(paths.fonts.src)
+    .pipe(changed(paths.fonts.dest, {extension: '.ttf'}))
     .pipe(dest(paths.fonts.dest))
 }
 
