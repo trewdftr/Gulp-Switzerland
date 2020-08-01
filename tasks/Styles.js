@@ -15,12 +15,12 @@ const uncss = require('postcss-uncss');
 
 
 function styles() {
-	return src([paths.styles.src, paths.styles.dest])
-	.pipe(sass())
+	return src(paths.styles.src)
 	.pipe(sourcemap.init())
+	.pipe(sass())
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } }, format: 'beautify' }))
 	.pipe(concat(paths.cssOutputName))
-	.pipe(sourcemap.write('.'))
+	.pipe(sourcemap.write('./map'))
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
@@ -33,7 +33,6 @@ function unusable () {
 			html: ['src/index.html']
 		})
 	];
-
 	
 	return src(paths.styles.dest + '/app.min.css') 
 	.pipe(postcss(plugins))
