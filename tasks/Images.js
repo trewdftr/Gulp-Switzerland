@@ -7,11 +7,9 @@ const imageresize = require('gulp-image-resize');
 const rename = require('gulp-rename');
 
 
-
 function images () {
     return src(paths.images.src)
     .pipe(changed(paths.images.dest))
-    .pipe(cache(imagemin()))
     .pipe(dest(paths.images.dest))
 }
 
@@ -104,13 +102,62 @@ function resizeLg2x () {
     .pipe(dest(paths.images.dest + '/large/@2x'))
 }
 
+function resizeSm3x () {
+    return src(paths.images.dest + '/*.jpg')
+    .pipe(imageresize(
+        {
+            width: widthSm + widthSm + widthSm,
+        }
+    ))
+    .pipe(rename((path) => {
+        path.basename += '-sm@3x'
+    }))
+    .pipe(dest(paths.images.dest + '/small/@3x'))
+}
+
+function resizeMd3x () {
+    return src(paths.images.dest + '/*.jpg')
+    .pipe(imageresize(
+        {
+            width: widthMd + widthMd + widthMd,
+        }
+    ))
+    .pipe(rename((path) => {
+        path.basename += '-md@3x'
+    }))
+    .pipe(dest(paths.images.dest + '/medium/@3x'))
+}
+
+function resizeLg3x () {
+    return src(paths.images.dest + '/*.jpg')
+    .pipe(imageresize(
+        {
+            width: widthLg + widthLg + widthLg,
+        }
+    ))
+    .pipe(rename((path) => {
+        path.basename += '-lg@3x'
+    }))
+    .pipe(dest(paths.images.dest + '/large/@3x'))
+}
+
+function cachemin () {
+    return src(`${paths.images.dest}/**/*.{jpg,webp,png}`)
+    .pipe(cache(imagemin()))
+    .pipe(dest(paths.images.dest))
+}
+
 
 exports.images = images;
+exports.cachemin = cachemin;
 exports.resizeSm = resizeSm;
 exports.resizeMd = resizeMd;
 exports.resizeLg = resizeLg;
 exports.resizeSm2x = resizeSm2x;
 exports.resizeMd2x = resizeMd2x;
 exports.resizeLg2x = resizeLg2x;
+exports.resizeSm3x = resizeSm3x;
+exports.resizeMd3x = resizeMd3x;
+exports.resizeLg3x = resizeLg3x;
 
 
