@@ -54,6 +54,7 @@
     "uncss": "^0.17.3"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "normalize-scss": "^7.0.1",
     "normalize-stylus": "^1.0.1",
     "normalize.less": "^1.0.0"
