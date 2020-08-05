@@ -31,8 +31,10 @@
     "gulp-changed": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-css-url-replace": "^0.1.0",
     "gulp-csslint": "^1.0.1",
     "gulp-gm": "0.0.9",
+    "gulp-html-replace": "^1.6.2",
     "gulp-htmlhint": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-image-resize": "^0.13.1",
@@ -44,13 +46,12 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
-    "gulp-ttf-svg": "^1.0.1",
     "gulp-ttf2eot": "^1.1.2",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "postcss-uncss": "^0.17.0",
-    "uncss": "^0.17.1"
+    "uncss": "^0.17.3"
   },
   "dependencies": {
     "normalize-scss": "^7.0.1",
