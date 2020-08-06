@@ -15,10 +15,14 @@ const clean       = require('./tasks/Clean');
 exports.convertImages = series(images.images,  images.resizeSm, images.resizeMd, images.resizeLg,images.resizeSm2x,images.resizeMd2x,images.resizeLg2x,
 images.resizeSm3x,images.resizeMd3x,images.resizeLg3x, images.cachemin);
 
-exports.convertFonts = series(fonts.toWoff2, fonts.toWoff, fonts.toSvg, fonts.toEot, fonts.ttfRebase);
+exports.convertFonts = series(fonts.toWoff2, fonts.toWoff, fonts.toEot, fonts.ttfRebase);
+
 exports.dev = series(series(this.convertFonts, this.convertImages, styles.styles, scripts.scripts), 
 parallel(watch.server, watch.startWatch));
+
 exports.devClear = clean.cleanSrc;
-exports.build = series(clean.cleanPublic, unusable.unusable, assets.publicFonts, assets.publicImages, parallel(assets.publicCss, assets.publicJs, html.html));
+
+exports.build = series(clean.cleanPublic, unusable.unusable, assets.publicFonts, assets.publicImages, 
+parallel(assets.publicCss, assets.publicJs, html.html));
 
 
