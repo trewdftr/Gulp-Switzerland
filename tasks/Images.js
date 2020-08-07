@@ -23,7 +23,6 @@ function resizeSm () {
         {
             width: widthSm,
             height: 220,
-            crop: false,
         }
     ))
     .pipe(rename((path) => {
