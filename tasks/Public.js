@@ -1,6 +1,6 @@
 const { src, dest } = require('gulp');
 const { paths } = require('./helpers/PathsHelper');
-let { deployDir } = require('./helpers/VariableHelper'); 
+
 
 function publicCss () {
     return src(paths.styles.srcPublic)
