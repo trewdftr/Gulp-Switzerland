@@ -6,12 +6,11 @@ const browserSync = require('browser-sync').create();
 const sourcemap = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 
+
 function scripts() {
     return src(paths.scripts.src)
     .pipe(sourcemap.init())
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
+    .pipe(babel())
     .pipe(concat(paths.jsOutputName))
     .pipe(uglify())
     .pipe(sourcemap.write('.'))
