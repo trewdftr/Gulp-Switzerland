@@ -1,11 +1,20 @@
 const { src, dest } = require('gulp');
-let {baseDir, deployDir, preprocessor} = require('./helpers/VariableHelper');
+const {baseDir, deployDir } = require('./helpers/VariableHelper');
 const htmlmin = require('gulp-htmlmin');
-
+const useref      = require('gulp-useref');
+const $if         = require('gulp-if')
 
 function html() {
     return src(`${baseDir}/*.html`)
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(useref({searchPath: ['.tmp', 'app', '.']}))
+    .pipe($if(/\.html$/, htmlmin({
+        collapseWhitespace: true,
+        processConditionalComments: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true
+    })))
     .pipe (dest(`${deployDir}/`))
 }
 
