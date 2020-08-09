@@ -1,29 +1,34 @@
-const { watch } = require('gulp');
-const { preprocessor, html, imagesWatch, baseDir }  = require('./helpers/VariableHelper');
-const { paths }   = require('./helpers/PathsHelper');
+const { watch }   = require('gulp');
 const styles      = require('./Styles')
-const images      = require('./Images')
 const scripts     = require('./Scripts')
 const localServer = require('browser-sync').create();
 
+let port = 9000;
+
 function sync() {
-    localServer.init({
-        server: { baseDir: 'src'},
-        notify: true,
-	    online: true
-	})
+	localServer.init({
+		notify: true,
+		port,
+		server: {
+		  baseDir: ['src'],
+		  routes: {
+			'/node_modules': 'node_modules'
+		  }
+		}
+	  });
+	
+	  watch([
+		'src/*.html',
+		'src/images/**/*',
+	  ]).on('change', reload);
+	
+	  watch('src/styles/**/*.css', styles);
+	  watch('src/js/**/*.js', scripts);
 }
 
 function reload() {
 	localServer.reload();
   }
 
-function startWatch() {
-	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles.styles);
-	watch(`${baseDir}/images/${baseDir}/${imagesWatch}`, images.images);
-	watch(`${baseDir}/${html}`).on('change', reload);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts.scripts);
-}
-
 exports.server = sync;
-exports.startWatch = startWatch;
+
