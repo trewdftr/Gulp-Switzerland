@@ -1,1 +1,1 @@
-console.log(2);
+$('h1').css('color', 'red');
