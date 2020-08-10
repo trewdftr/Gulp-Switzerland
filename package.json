@@ -38,6 +38,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-css-url-replace": "^0.1.0",
     "gulp-csslint": "^1.0.1",
+    "gulp-fonter": "^0.3.0",
     "gulp-html-replace": "^1.6.2",
     "gulp-htmlhint": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
@@ -51,9 +52,6 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
-    "gulp-ttf2eot": "^1.1.2",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-useref": "^4.0.1"
   },
