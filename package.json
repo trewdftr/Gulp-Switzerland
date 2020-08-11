@@ -52,6 +52,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
+    "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-useref": "^4.0.1"
   },
