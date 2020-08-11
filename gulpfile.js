@@ -28,11 +28,10 @@ exports.convertImages =
     );
 
 exports.convertFonts = 
-    series
+    parallel
     (
-        fonts.toWoff2, 
-        fonts.toWoff, 
-        fonts.toEot, 
+        fonts.transform,
+        fonts.transformToWoff2,
         fonts.ttfRebase
     );
 
