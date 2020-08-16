@@ -8,6 +8,7 @@ const toWoff2   = require('gulp-ttf2woff2');
 
 function transform () {
     return src(paths.fonts.src)
+    .pipe(changed(paths.fonts.dest, {extension: ['.woff', '.eot']}))
     .pipe(fonter(
         {
             formats: ['eot', 'woff']
@@ -18,6 +19,7 @@ function transform () {
 
 function transformToWoff2 () {
     return src(paths.fonts.src)
+    .pipe(changed(paths.fonts.dest, {extension: '.woff2'}))
     .pipe(toWoff2())
     .pipe(dest(paths.fonts.dest))
 }
