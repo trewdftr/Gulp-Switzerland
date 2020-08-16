@@ -39,10 +39,12 @@ exports.dev = series(
     series
     (
         this.convertFonts, 
-        this.convertImages, styles.styles, 
-        scripts.scripts,
+        this.convertImages, 
+        styles.styles,
+        scripts.scripts
     ), 
-    parallel(watch.server));
+         
+    parallel(watch.sync,watch.startWatch));
 
 exports.devClear = clean.cleanSrc;
 
